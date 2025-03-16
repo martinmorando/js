@@ -1,8 +1,13 @@
+/*
+    Numbers
+*/
+
+// Declare and assign numeric variables
 let a = 1
 let b = 2
 let c = 3.33
 
-// Basic operations: + - * / %
+// Basic operations: + - * / % **
 console.log(a + b)
 
 // Built-in methods
