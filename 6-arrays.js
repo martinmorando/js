@@ -22,10 +22,13 @@ arrConst[1] = 0;                    // [1, 0, 3]
 
 
 // [ACCESS AND UPDATE]
-// Access elements by index
+// - Access elements by positive indexes
 arrStrings[2];                      // "C"
 
-// Update elements by index
+// - Access the last element (to use negative indexes, see the ".at" method)
+arrStrings[arrStrings.length - 1];  // "C"
+
+// - Update elements by index
 arrMixed[3] = "B";                  // arrMixed: ['A', 2, 'z', 'B']
 
 
@@ -49,8 +52,12 @@ arrMixed.shift();                   // arrMixed: ['A', 2, 'z', 'B', 'Z']
 // Remove last element (returns element removed)
 arrMixed.pop();                     // arrMixed: ['A', 2, 'z', 'B']
 
+// Get element by indexes, including negative indexes
+arrMixed.at(1);                     // 2
+arrMixed.at(-1);                    // 'B'
+
 
 
 // [NESTED ARRAYS]
-arrNested = [[1, 2, 3], [4, 5], [6], [7, 8, 9, 10, 11]]
+const arrNested = [[1, 2, 3], [4, 5], [6], [7, 8, 9, 10, 11]]
 arrNested[3][3];                    // 10
