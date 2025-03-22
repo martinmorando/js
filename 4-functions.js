@@ -1,5 +1,5 @@
 /*
-    Functions
+    Functions: Part A
 */
 
 // ["Function declaration"]
