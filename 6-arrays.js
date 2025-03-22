@@ -40,21 +40,31 @@ arrStrings.length;                  // 3
 
 
 // [METHODS]
-// Add element to the start and shift indexes up one place
+// +[MUTATING METHODS]: they alter the original array
+// - Add element to the start and shift indexes up one place
 arrMixed.unshift("1A");             // arrMixed: ['1A', 'A', 2, 'z', 'B']
 
-// Add element to the end
+// - Add element to the end
 arrMixed.push("Z");                 // arrMixed: ['1A', 'A', 2, 'z', 'B', 'Z']
 
-// Remove first element and shift indexes down one place
+// - Remove first element and shift indexes down one place
 arrMixed.shift();                   // arrMixed: ['A', 2, 'z', 'B', 'Z']
 
-// Remove last element (returns element removed)
+// - Remove last element (returns element removed)
 arrMixed.pop();                     // arrMixed: ['A', 2, 'z', 'B']
 
-// Get element by indexes, including negative indexes
-arrMixed.at(1);                     // 2
+// - Replace 2 elements starting from index 1 + new elements
+arrMixed.splice(1, 2, "Y", "T");    // arrMixed: ['A', 'Y', 'T', 'B']
+
+
+// +[NON-MUTATING METHODS]: return values without modifying the array
+// - Get element by indexes, including negative indexes
+arrMixed.at(1);                     // 'Y'
 arrMixed.at(-1);                    // 'B'
+
+// - Combine all elements of an array into one string
+arrMixed.join();                    // 'A,Y,T,B'
+arrMixed.join(", ");                // 'A, Y, T, B'
 
 
 
