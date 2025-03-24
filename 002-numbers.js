@@ -21,6 +21,15 @@ a % b;
 b ** 2;
 
 
+// [Augmented assignment operators]
+a += 5;
+a -= 2;
+a *= 7;
+a /= 3;
+a %= 3;
+a **= 3;
+
+
 // [Increment, decrement operators]
 a--;
 a++;
