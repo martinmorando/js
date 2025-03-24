@@ -15,7 +15,7 @@ typeof a                    // "string"
 console.log(a + ", " + b + ".")     // "I can't change, I can change."
 
 
-// [String interpolation]
+// [String interpolation]: since ES6
 console.log(`${a}, ${b}.`)          // "I can't change, I can change."
 
 
@@ -23,9 +23,12 @@ console.log(`${a}, ${b}.`)          // "I can't change, I can change."
 a[3]                // a
 
 
+// [String properties]: access with dot operator (.)
+c.length;           // 9 (includes whitespace)
+
+
 // [String methods]
 let c = "  Hello  ";
-c.length;           // 9 (includes whitespace)
 c.toUpperCase();    //   HELLO (includes whitespace)
 c.toLowerCase();    //   hello (includes whitespace) 
 c.trim()            // Removes whitespace both sides
