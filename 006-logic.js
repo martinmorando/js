@@ -15,6 +15,8 @@ if (x === true && y === false) {
     console.log("x is true and y is false")
 } else if (x === true && y === true ) {
     console.log("x and y are true")
+} else {
+    console.log("Previous conditions are false")
 }
 
 
