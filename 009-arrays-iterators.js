@@ -1,5 +1,10 @@
 /*
     Arrays iterators
+    - forEach
+    - map
+    - filter
+    - every
+    - some
 */
 
 numbers = [3, 4, 5, 6, 7];
@@ -31,3 +36,21 @@ const numbersFiltered = numbers.filter(n => {
 });
 
 console.log(numbersFiltered);           // [4, 6]
+
+
+
+// [EVERY]: check if all elements satisfy condition. Returns boolean
+const areAllElementsEven = numbers.every(n => {
+    return n % 2 == 0;
+});
+
+console.log(areAllElementsEven);        // false
+
+
+
+// [SOME]: check if at least one element satisfies condition. Returns boolean
+const isAnyElementBiggerThanFive = numbers.some(n => {
+    return n > 5;
+});
+
+console.log(isAnyElementBiggerThanFive) // true
