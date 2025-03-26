@@ -21,7 +21,7 @@ arrConst[1] = 0;                    // [1, 0, 3]
 
 
 
-// [ACCESS AND UPDATE]
+// [ACCESS & UPDATE]
 // - Access elements by positive indexes
 arrStrings[2];                      // "C"
 
@@ -56,15 +56,22 @@ arrMixed.pop();                     // arrMixed: ['A', 2, 'z', 'B']
 // - Replace 2 elements starting from index 1 + new elements
 arrMixed.splice(1, 2, "Y", "T");    // arrMixed: ['A', 'Y', 'T', 'B']
 
+// - Sort
+arrMixed.sort();                    // arrMixed: ['A', 'B', 'T', 'Y']
+
+
 
 // +[NON-MUTATING METHODS]: return values without modifying the array
+// - Get index from value
+arrMixed.indexOf("Y");              // 3
+
 // - Get element by indexes, including negative indexes
-arrMixed.at(1);                     // 'Y'
-arrMixed.at(-1);                    // 'B'
+arrMixed.at(1);                     // 'B'
+arrMixed.at(-1);                    // 'T'
 
 // - Combine all elements of an array into one string
-arrMixed.join();                    // 'A,Y,T,B'
-arrMixed.join(", ");                // 'A, Y, T, B'
+arrMixed.join();                    // 'A,B,T,Y'
+arrMixed.join(", ");                // 'A, B, T, Y'
 
 
 
