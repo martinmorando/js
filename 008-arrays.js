@@ -73,6 +73,10 @@ arrMixed.at(-1);                    // 'T'
 arrMixed.join();                    // 'A,B,T,Y'
 arrMixed.join(", ");                // 'A, B, T, Y'
 
+// - Combine 2 or more arrays
+let new_array = [45, 50];           
+arrMixed.concat(new_array);         // ['A', 'B', 'T', 'Y', 45, 50]
+
 
 
 // [NESTED ARRAYS]
