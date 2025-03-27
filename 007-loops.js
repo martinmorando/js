@@ -3,8 +3,19 @@
 */
 
 // For loop
-for (let i = 1; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {    
+
+    // Skip i=3
+    if (i == 3) {
+        continue;
+    }
+
     console.log(`For loop: ${i}`);
+
+    // Stop at i=8
+    if (i == 8) {
+        break;
+    }
 }
 
 
