@@ -24,11 +24,11 @@ a[3]                // a
 
 
 // [String properties]: access with dot operator (.)
+let c = "  Hello  ";
 c.length;           // 9 (includes whitespace)
 
 
 // [String methods]
-let c = "  Hello  ";
 c.toUpperCase();    //   HELLO (includes whitespace)
 c.toLowerCase();    //   hello (includes whitespace) 
 c.trim()            // Removes whitespace both sides
