@@ -2,45 +2,61 @@
     Strings
 */
 
-// [Declare and assign a string...]
-let a = "I can't change"    // ...Variable (can be modified)
-const b = "I can change"    // ...Constant (can't be modified)
+// [DECLARE & ASSIGN A STRING...]
+let a = "I can't change";    // ...Variable (can be modified)
+const b = "I can change";    // ...Constant (can't be modified)
+
+// [CHECK DATA TYPE]
+typeof a;                            // "string"
+
+// [STRING CONCATENATION]
+console.log(a + ", " + b + ".");     // "I can't change, I can change."
+
+// [STRING INTERPOLATION]: since ES6
+console.log(`${a}, ${b}.`);          // "I can't change, I can change."
+
+// [ACCESS BY INDEX]
+// - Access 4th character
+a[3];                // a
 
 
-// [Check data type of variable]
-typeof a                    // "string"
-
-
-// [String concatenation]
-console.log(a + ", " + b + ".")     // "I can't change, I can change."
-
-
-// [String interpolation]: since ES6
-console.log(`${a}, ${b}.`)          // "I can't change, I can change."
-
-
-// [Access 4th character by index]
-a[3]                // a
-
-
-// [String properties]: access with dot operator (.)
+// ------------------------------------------------------
+// [STRING PROPERTIES]: access with dot operator (.)
+// - Returns number of characters, including whitespace
 let c = "  Hello  ";
-c.length;           // 9 (includes whitespace)
+c.length;            // 9
 
 
-// [String methods]
-c.toUpperCase();    //   HELLO (includes whitespace)
-c.toLowerCase();    //   hello (includes whitespace) 
-c.trim()            // Removes whitespace both sides
-c.trimStart()       // Removes whitespace to the left
-c.trimEnd()         // Removes whitespace to the right
+// ------------------------------------------------------
+// [STRING METHODS]
+// +[UPPERCASE & LOWERCASE]
+// - Returns upper case (includes whitespace)
+c.toUpperCase();     //   HELLO
+// - Returns lower case (includes whitespace)
+c.toLowerCase();     //   hello
 
 
-// [Search, replace]
-c.substring(3,5)    // "el" (starting index, last index (not included))
-c.replace("e", "3") // H3llo (replaces "e" with "3")
+// +[REMOVE WHITESPACE]
+// - Removes whitespace both sides
+c.trim();
+// - Removes whitespace to the left
+c.trimStart();
+// - Removes whitespace to the right
+c.trimEnd();
 
 
-// [Return boolean]
-c.startsWith("H");  // false
-c.includes("lo")    // true (is "lo" contained in c?)
+// +[GET CHARACTER & INDEX]
+// - Returns character at specified index
+c.charAt(2);         // H
+// - Returns the first index of a substring in string
+c.indexOf("e");      // 3
+
+
+// +[SEARCH & REPLACE]
+c.substring(3, 5);    // "el" (starting index, last index (not included))
+c.replace("e", "3"); // H3llo (replaces "e" with "3")
+
+
+// +[RETURN BOOLEAN]
+c.startsWith("H");   // false
+c.includes("lo");    // true (is "lo" contained in c?)
