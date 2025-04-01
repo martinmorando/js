@@ -3,8 +3,8 @@
 */
 
 // [DECLARE & ASSIGN A STRING...]
-let a = "I can't change";    // ...Variable (can be modified)
-const b = "I can change";    // ...Constant (can't be modified)
+const a = "I can't change";          // ...Constant (can't be modified)
+let b = "I can change";              // ...Variable (can be modified)
 
 // [CHECK DATA TYPE]
 typeof a;                            // "string"
