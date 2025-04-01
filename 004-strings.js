@@ -57,6 +57,13 @@ c.substring(3, 5);    // "el" (starting index, last index (not included))
 c.replace("e", "3"); // H3llo (replaces "e" with "3")
 
 
+// +[SPLIT]: divide a string into array of substrings
+const message = "All tyrants will be shot";
+const result = message.split(" ");
+console.log(result);    // Output: [ 'All', 'tyrants', 'will', 'be', 'shot' ]
+console.log(result[4]); // Output: shot
+
+
 // +[RETURN BOOLEAN]
 c.startsWith("H");   // false
 c.includes("lo");    // true (is "lo" contained in c?)
