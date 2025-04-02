@@ -3,6 +3,7 @@
     - forEach
     - map
     - filter
+    - reduce
     - every
     - some
 */
@@ -36,6 +37,15 @@ const numbersFiltered = numbers.filter(n => {
 });
 
 console.log(numbersFiltered);           // [4, 6]
+
+
+
+// [REDUCE]: returns a single value
+const sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+});
+
+console.log(sum);                       // Output: 25
 
 
 
