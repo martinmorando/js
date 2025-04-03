@@ -11,10 +11,13 @@
 numbers = [3, 4, 5, 6, 7];
 
 
-// [FOR EACH]
-numbers.forEach(n => {
-    console.log(n);                     // Log each item 
+// [FOR EACH]: executes function in each non-empty element of
+//             an array. Returns undefined.
+const forEachExample = numbers.forEach(n => {
+    console.log(n);                     // Output: 3 \n 4 \n 5 \n 6 \n 7 
 });
+
+console.log(forEachExample);            // Output: undefined
 
 
 // [MAP]: similar to .forEach but creates a new array
