@@ -65,6 +65,10 @@ arrMixed.sort();                    // arrMixed: ['A', 'B', 'T', 'Y']
 // - Get index from value
 arrMixed.indexOf("Y");              // 3
 
+// - Returns first index of first match
+const i = arrIntegers.findIndex(n => n > 10);
+console.log(i);                     // Output: 4 
+
 // - Get element by indexes, including negative indexes
 arrMixed.at(1);                     // 'B'
 arrMixed.at(-1);                    // 'T'
