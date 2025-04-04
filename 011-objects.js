@@ -4,13 +4,12 @@
 */
 
 // [CREATE]
-// - Empty object
+// - Create an empty object literal using {}
 let car = {}
 
-// - Keys: name, year. Values: SpaceExploration Inc., year
-// - Methods: printCEO
+// - Create an object literal with 3 key-value pairs and a method
 let company = {    
-    name: 'SpaceExploration Inc.',
+    name: 'M Inc.',
     year: 2025,
     contact: {                              // Nested object
         email: 'ghostaddress@notf0und.c000m',
@@ -34,7 +33,7 @@ console.log(company['year']);               // 2025
 let y = 'year';
 console.log(company[y]);                    // 2025
 
-// - Accessing properties of nested object
+// - Accessing properties of the nested object
 console.log(company.contact.address);       // Void 0, Mars
 console.log(company["contact"].address);    // Void 0, Mars
 console.log(company["contact"]["address"]); // Void 0, Mars
@@ -46,5 +45,26 @@ company["stocksInCirculation"] = 21000000;
 
 
 
-// [CALL METHODS]
-company.printCEO();                     // Martin is the CEO
+// [CALLING THE METHODS]
+company.printCEO();                         // Martin is the CEO
+
+
+// [OBJECTS ARE PASSED BY REFERENCE]
+// Any change to the variable mutates the object (even when using "const")
+const my_car = {
+    plate: "FR33"
+};
+
+let swapA = obj => {
+    obj.plate = "XX22"
+};
+
+let swapB = obj => {
+    obj["plate"] = "XX33"  // Similar to swapA() but using bracket notation
+};
+
+console.log(my_car.plate);                  // Output: FR33
+swapA(my_car);
+console.log(my_car.plate);                  // Output: XX22
+swapB(my_car);
+console.log(my_car.plate);                  // Output: XX33
