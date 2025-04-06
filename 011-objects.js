@@ -44,9 +44,13 @@ console.log(company["contact"]["address"]); // Void 0, Mars
 company["stocksInCirculation"] = 21000000;
 
 
+// [DELETE PROPERTIES]
+delete company.stocksInCirculation;
+console.log(company.stocksInCirculation);   // Output: undefined
+
 
 // [CALLING THE METHODS]
-company.printCEO();                         // Martin is the CEO
+company.printCEO();                         // Output: Martin is the CEO
 
 
 // [OBJECTS ARE PASSED BY REFERENCE]
