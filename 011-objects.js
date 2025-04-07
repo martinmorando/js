@@ -15,6 +15,20 @@ let company = {
         email: 'ghostaddress@notf0und.c000m',
         address: 'Void 0, Mars'
     },
+    team: {
+        ceo: {
+            name: "Martin",
+            planet: "Earth"
+        },
+        cfo: {
+            name: "Miles",
+            planet: "Mars"
+        },
+        coo: {
+            name: "Steve",
+            planet: "Jupiter"
+        }
+    },
     printCEO () {
         console.log('Martin is the CEO');
     }
@@ -44,13 +58,16 @@ console.log(company["contact"]["address"]); // Void 0, Mars
 company["stocksInCirculation"] = 21000000;
 
 
+
 // [DELETE PROPERTIES]
 delete company.stocksInCirculation;
 console.log(company.stocksInCirculation);   // Output: undefined
 
 
+
 // [CALLING THE METHODS]
 company.printCEO();                         // Output: Martin is the CEO
+
 
 
 // [OBJECTS ARE PASSED BY REFERENCE]
@@ -72,3 +89,10 @@ swapA(my_car);
 console.log(my_car.plate);                  // Output: XX22
 swapB(my_car);
 console.log(my_car.plate);                  // Output: XX33
+
+
+
+// [LOOPING THROUGH AN OBJECT]
+for (role in company.team) {
+    console.log(`${company.team[role].name}`); // Martin \n Miles \n Steve
+}
